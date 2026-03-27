@@ -104,8 +104,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav__cta {
   padding: .6rem 1.5rem; border: 1px solid var(--terra);
   color: var(--terra) !important; transition: background .3s, color .3s !important;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
-.nav__cta:hover { background: var(--terra); color: var(--ivory) !important; }
+.nav__cta:hover { background: var(--terra); color: var(--ivory) !important; text-shadow: none; }
+
+/* ═══ FIXED CONTACT BAR ═══ */
+.fixed-contacts {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(44,42,38,.92); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center; gap: 1.5rem;
+  padding: .7rem 1.5rem;
+}
+.fixed-contacts a {
+  color: var(--ivory); text-decoration: none; font-size: .9rem;
+  display: flex; align-items: center; gap: .4rem;
+  transition: opacity .3s;
+}
+.fixed-contacts a:hover { opacity: .7; }
+.fixed-contacts__phone { font-weight: 700; letter-spacing: .03em; }
+.fixed-contacts__icon {
+  width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center;
+}
+.fixed-contacts__icon svg { width: 22px; height: 22px; fill: currentColor; }
 
 /* Burger */
 .nav__burger {
